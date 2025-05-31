@@ -7,9 +7,6 @@
   <title>ShellCoach | The #1 Linux Learning Platform</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html {
-      scroll-behavior: smooth;
-    }
     body {
       font-family: 'Courier New', Courier, monospace;
       background: #0f172a;
@@ -40,46 +37,12 @@
       color: #94a3b8;
       font-size: 1.1rem;
     }
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #facc15;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: #cbd5e1;
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .cta {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-    }
-    .cta a {
-      text-decoration: none;
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .cta a:hover {
-      background: #0ea5e9;
-    }
-    #auth {
+    .auth-container {
       padding: 3rem 1rem;
       text-align: center;
       background: #1e293b;
     }
-    #auth input {
+    .auth-container input {
       width: 100%;
       max-width: 300px;
       margin-bottom: 1rem;
@@ -89,7 +52,7 @@
       border-radius: 6px;
       color: #f8fafc;
     }
-    #auth button {
+    .auth-container button {
       padding: 0.75rem 1.5rem;
       margin: 0.25rem;
       background: #38bdf8;
@@ -116,16 +79,7 @@
     <p>The #1 Linux Learning Platform by Kernel+ Academy</p>
   </header>
 
-  <div class="hero">
-    <h2>Launch Your Tech Career from the Command Line</h2>
-    <p>Master real-world Linux skills through interactive labs, guided tutorials, and our exclusive ShellCoach virtual terminal. Whether you're a beginner or career switcher, this is where your Linux journey starts.</p>
-    <div class="cta">
-      <a href="#auth">Login</a>
-      <a href="#auth">Get Started</a>
-    </div>
-  </div>
-
-  <div id="auth">
+  <div class="auth-container" id="auth">
     <input id="email" type="email" placeholder="Enter your email" /><br>
     <input id="password" type="password" placeholder="Enter your password" /><br>
     <button onclick="login()">Login</button>
