@@ -1,110 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ShellCoach Login - Kernel+ Academy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
-  <script src="firebase-config.js"></script>
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShellCoach | The #1 Linux Learning Platform</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: 'Courier New', Courier, monospace;
-      background: linear-gradient(to right, #0f172a, #1e293b);
+      background: #0f172a;
       color: #f8fafc;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      padding: 3rem 1rem;
-      min-height: 100vh;
+      justify-content: space-between;
     }
     header {
+      background: #1e293b;
+      padding: 2rem 1rem;
       text-align: center;
-      margin-bottom: 2rem;
+      border-bottom: 1px solid #334155;
     }
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.2rem;
       color: #38bdf8;
+      margin-bottom: 0.5rem;
     }
     header p {
       color: #94a3b8;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
-    .login-container {
-      background: #0f172a;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 2rem;
-      max-width: 400px;
-      width: 100%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
     }
-    input {
-      width: 100%;
-      padding: 0.75rem;
+    .hero h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
-      border: none;
-      border-radius: 6px;
-      background: #1e293b;
-      color: #f8fafc;
-      font-size: 1rem;
+      color: #facc15;
     }
-    button {
-      width: 48%;
-      padding: 0.75rem;
-      font-size: 1rem;
-      background-color: #38bdf8;
-      color: #0f172a;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin: 0.25rem;
-    }
-    #shell {
-      display: none;
-      background: #1e293b;
-      padding: 2rem;
-      margin-top: 2rem;
-      border-radius: 12px;
-      width: 100%;
+    .hero p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
       max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .cta a {
+      text-decoration: none;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #0ea5e9;
     }
     footer {
-      margin-top: auto;
-      padding-top: 2rem;
+      background: #1e293b;
+      text-align: center;
+      padding: 1rem;
       color: #64748b;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #334155;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to ShellCoach</h1>
+    <h1>ShellCoach</h1>
     <p>The #1 Linux Learning Platform by Kernel+ Academy</p>
   </header>
-  <div class="login-container" id="auth">
-    <input id="email" type="email" placeholder="Enter your email" />
-    <input id="password" type="password" placeholder="Enter your password" />
-    <div style="display: flex; justify-content: space-between;">
-      <button onclick="login()">Login</button>
-      <button onclick="signup()">Sign Up</button>
+
+  <div class="hero">
+    <h2>Launch Your Tech Career from the Command Line</h2>
+    <p>Master real-world Linux skills through interactive labs, guided tutorials, and our exclusive ShellCoach virtual terminal. Whether you're a beginner or career switcher, this is where your Linux journey starts.</p>
+    <div class="cta">
+      <a href="login.html">Login</a>
+      <a href="signup.html">Get Started</a>
     </div>
   </div>
 
-  <div id="shell">
-    <h2>Hello, <span id="user-email"></span> 👋</h2>
-    <p>Welcome to your ShellCoach terminal dashboard.</p>
-    <button onclick="logout()">Logout</button>
-  </div>
-
   <footer>
-    &copy; 2025 Kernel+ Academy. Empowering the next generation of Linux pros.
+    &copy; 2025 Kernel+ Academy. All rights reserved.
   </footer>
 </body>
 </html>
