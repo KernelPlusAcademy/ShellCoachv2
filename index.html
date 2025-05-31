@@ -7,6 +7,9 @@
   <title>ShellCoach | The #1 Linux Learning Platform</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Courier New', Courier, monospace;
       background: #0f172a;
@@ -71,6 +74,31 @@
     .cta a:hover {
       background: #0ea5e9;
     }
+    #auth {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: #1e293b;
+    }
+    #auth input {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: #0f172a;
+      border: none;
+      border-radius: 6px;
+      color: #f8fafc;
+    }
+    #auth button {
+      padding: 0.75rem 1.5rem;
+      margin: 0.25rem;
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
     footer {
       background: #1e293b;
       text-align: center;
@@ -91,11 +119,26 @@
   <div class="hero">
     <h2>Launch Your Tech Career from the Command Line</h2>
     <p>Master real-world Linux skills through interactive labs, guided tutorials, and our exclusive ShellCoach virtual terminal. Whether you're a beginner or career switcher, this is where your Linux journey starts.</p>
-<a href="#auth">Login</a>
-<a href="#auth">Get Started</a>
+    <div class="cta">
+      <a href="#auth">Login</a>
+      <a href="#auth">Get Started</a>
+    </div>
   </div>
+
+  <div id="auth">
+    <input id="email" type="email" placeholder="Enter your email" /><br>
+    <input id="password" type="password" placeholder="Enter your password" /><br>
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+
   <footer>
     &copy; 2025 Kernel+ Academy. All rights reserved.
   </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
