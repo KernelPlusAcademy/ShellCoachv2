@@ -1,9 +1,11 @@
 
 // Replace with your Firebase project config
 const firebaseConfig = {
-  apiKey: "YOUR-API-KEY",
-  authDomain: "YOUR-PROJECT.firebaseapp.com",
-  projectId: "YOUR-PROJECT-ID",
-  appId: "YOUR-APP-ID"
+  apiKey: "AIzaSyA4uVJOZ1ZWls6hK1b94Bm-waDgyJfYehM",
+  authDomain: "shellcoach-eacb2.firebaseapp.com",
+  projectId: "shellcoach-eacb2",
+  storageBucket: "shellcoach-eacb2.firebasestorage.app",
+  messagingSenderId: "97519723209",
+  appId: "1:97519723209:web:5d815580c3d64b0f486318",
+  measurementId: "G-LJZYMRCCCE"
 };
-firebase.initializeApp(firebaseConfig);
