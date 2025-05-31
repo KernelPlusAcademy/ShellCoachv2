@@ -1,21 +1,14 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// DO NOT use "import" in browser JS unless you're using a bundler like Webpack/Vite
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Replace this with your actual config
 const firebaseConfig = {
   apiKey: "AIzaSyA4uVJOZ1ZWls6hK1b94Bm-waDgyJfYehM",
   authDomain: "shellcoach-eacb2.firebaseapp.com",
   projectId: "shellcoach-eacb2",
-  storageBucket: "shellcoach-eacb2.firebasestorage.app",
+  storageBucket: "shellcoach-eacb2.appspot.com", // fixed typo here: use 'appspot.com'
   messagingSenderId: "97519723209",
   appId: "1:97519723209:web:5d815580c3d64b0f486318",
   measurementId: "G-LJZYMRCCCE"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
