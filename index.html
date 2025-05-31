@@ -62,6 +62,26 @@
       cursor: pointer;
       font-weight: bold;
     }
+    #shell {
+      display: none;
+      background: #1e293b;
+      padding: 2rem;
+      margin: 2rem auto;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+    #shell button {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
     footer {
       background: #1e293b;
       text-align: center;
@@ -84,6 +104,12 @@
     <input id="password" type="password" placeholder="Enter your password" /><br>
     <button onclick="login()">Login</button>
     <button onclick="signup()">Sign Up</button>
+  </div>
+
+  <div id="shell">
+    <h2>Welcome, <span id="user-email"></span> 👋</h2>
+    <p>This is your ShellCoach terminal dashboard. More features coming soon.</p>
+    <button onclick="logout()">Logout</button>
   </div>
 
   <footer>
