@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ShellCoach Login</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="script.js" defer></script>
+  <style>
+    body { font-family: monospace; background: #0f172a; color: #f8fafc; text-align: center; padding: 3rem; }
+    input, button { margin: 0.5rem; padding: 0.5rem; }
+    #shell { display: none; background: #1e293b; padding: 2rem; margin-top: 2rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to ShellCoach</h1>
+  <div id="auth">
+    <input id="email" type="email" placeholder="Email" />
+    <input id="password" type="password" placeholder="Password" />
+    <br>
+    <button onclick="login()">Login</button>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+  <div id="shell">
+    <h2>Hello, <span id="user-email"></span> 👋</h2>
+    <p>This is your ShellCoach terminal area. More features coming soon!</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+</body>
+</html>
